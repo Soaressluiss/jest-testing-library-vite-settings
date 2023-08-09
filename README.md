@@ -2,15 +2,15 @@
 
 
 ```jsx
-npm i jest @types/jest ts-node -D
+npm install jest @types/jest ts-node -D
 ```
 
 ```jsx
-npm i @testing-library/jest-dom @testing-library/react @testing-library/user-event -D
+npm install @testing-library/jest-dom @testing-library/react @testing-library/user-event -D
 ```
 
 ```jsx
-npm install @babel/core @babel/preset-env @babel/preset-react babel-jest identity-obj-proxy jest-environment-jsdom -D
+npm install @babel/core @babel/preset-env @babel/preset-typescript @babel/preset-react babel-jest identity-obj-proxy jest-environment-jsdom -D
 ```
 
 ### Criar o arquivo jest.config.ts
@@ -52,7 +52,8 @@ module.exports = 'test-file-stub'
 {
   "presets": [
     ["@babel/preset-env", { "targets": { "esmodules": true } }],
-    ["@babel/preset-react", { "runtime": "automatic" }]
+    ["@babel/preset-react", { "runtime": "automatic" }],
+    ["@babel/preset-typescript"]
   ]
 }
 ```
